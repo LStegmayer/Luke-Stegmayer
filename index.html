@@ -75,8 +75,6 @@
 		<option value="battlecourse-4.png">Battle Course 4</option>
 	</select>
 
-<p id="threejsparent" style="margin-left:27%;margin-right:27%;text-align:center;"></p>
-
 	<script src="three.min.js"></script>
 	<script type="module">
 		
@@ -86,7 +84,7 @@
 		renderer.setPixelRatio( window.devicePixelRatio * 1 ); //use to provide supersamping or undersampling
 		renderer.setSize(WIDTH, HEIGHT);
 		renderer.setClearColor(0xDDDDDD, 1);
-		document.getElementByID("threejsparent").appendChild(renderer.domElement);
+		document.body.appendChild(renderer.domElement);
 		var scene = new THREE.Scene();
 		var camera = new THREE.PerspectiveCamera(50, WIDTH/HEIGHT);
 		camera.position.z = 30;
