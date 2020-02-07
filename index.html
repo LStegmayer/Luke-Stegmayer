@@ -127,7 +127,7 @@
 				levelmap.material.map.magFilter = THREE.NearestFilter;
 				levelmap.material.needsUpdate = true;
 				//update background
-				if(level.includes("mario")){
+				if(level.includes("mario" || "battlecourse-4")){
 					backgroundTexture = loader.load('images/backgrounds/backgrounds (6).png');
 				}
 				else if(level.includes("choco")){
@@ -139,16 +139,16 @@
 				else if(level.includes("ghost")){
 					backgroundTexture = loader.load('images/backgrounds/backgrounds (3).png');
 				}
-				else if(level.includes("koopa")){
+				else if(level.includes("koopa" || "battlecourse-2")){
 					backgroundTexture = loader.load('images/backgrounds/backgrounds (2).png');
 				}
-				else if(level.includes("vanilla")){
+				else if(level.includes("vanilla" || "battlecourse-3")){
 					backgroundTexture = loader.load('images/backgrounds/backgrounds (1).png');
 				}
 				else if(level.includes("rainbow")){
 					backgroundTexture = loader.load('images/backgrounds/backgrounds (4).png');
 				}
-				else if(level.includes("donut")){
+				else if(level.includes("donut" || "battlecourse-1")){
 					backgroundTexture = loader.load('images/backgrounds/backgrounds (0).png');
 				}
 				backgroundTexture.magFilter = THREE.NearestFilter;
