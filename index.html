@@ -84,7 +84,7 @@
 		renderer.setPixelRatio( window.devicePixelRatio * 1 ); //use to provide supersamping or undersampling
 		renderer.setSize(WIDTH, HEIGHT);
 		renderer.setClearColor(0xDDDDDD, 1);
-		document.body.appendChild(renderer.domElement);
+		document.body.appendChild( renderer.domElement );
 		var scene = new THREE.Scene();
 		var camera = new THREE.PerspectiveCamera(50, WIDTH/HEIGHT);
 		camera.position.z = 30;
