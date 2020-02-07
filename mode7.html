@@ -38,12 +38,7 @@
 
 	<script src="three.min.js"></script>
 	<script type="module">
-		//set up stuff
-		import { EffectComposer } from './three/examples/jsm/postprocessing/EffectComposer.js';
-		import { RenderPass } from './three/examples/jsm/postprocessing/RenderPass.js';
-		import { UnrealBloomPass } from './three/examples/jsm/postprocessing/UnrealBloomPass.js';
-
-
+		
 		var WIDTH = window.innerWidth;
 		var HEIGHT = window.innerHeight;
 		var renderer = new THREE.WebGLRenderer({antialias:true});
@@ -72,21 +67,11 @@
 		backgroundTexture.minFilter = THREE.NearestFilter;
 		scene.background = backgroundTexture;
 
-		//TODO: postprocessing
-		var composer = new EffectComposer( renderer );
-		composer.addPass( new RenderPass( scene, camera ) );
-
-		var bloomPass = new UnrealBloomPass( new THREE.Vector2( window.innerWidth, window.innerHeight ), 1.5, 0.4, 0.85 );
-					bloomPass.threshold = 0;
-					bloomPass.strength = 0.12;
-					bloomPass.radius = 0.5;
-		composer.addPass(bloomPass);
-
 		var level = document.getElementById("levelselect").value;
 		function render() {
 			requestAnimationFrame(render);
+			renderer.render(scene, camera);
 			levelmap.rotation.z += 0.005
-			composer.render(scene, camera);
 			//check if level has changed, change textures if so
 			if(document.getElementById("levelselect").value != level){
 				//update map
