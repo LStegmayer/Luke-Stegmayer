@@ -75,6 +75,9 @@
 		<option value="battlecourse-4.png">Battle Course 4</option>
 	</select>
 
+	<div id="mode7viewer">
+	</div>  
+
 	<script src="three.min.js"></script>
 	<script type="module">
 		
@@ -84,7 +87,7 @@
 		renderer.setPixelRatio( window.devicePixelRatio * 1 ); //use to provide supersamping or undersampling
 		renderer.setSize(WIDTH, HEIGHT);
 		renderer.setClearColor(0xDDDDDD, 1);
-		document.body.appendChild( renderer.domElement );
+		document.getElementById('mode7viewer').appendChild( renderer.domElement );
 		var scene = new THREE.Scene();
 		var camera = new THREE.PerspectiveCamera(50, WIDTH/HEIGHT);
 		camera.position.z = 30;
