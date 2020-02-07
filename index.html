@@ -43,6 +43,113 @@
 <h1 style="margin-top:50px;margin-bottom:30px;font-size:60px;font-family:Lucida Sans Unicode,Lucida Grande,sans-serif;font-style:bold;color:rgb(30,30,30);text-align:center;">2001 Stargate</h1>
 <div align="center"><iframe src="stargate.html" style="height:600px;width:600px;"></iframe></div>
 <p style="margin-left:27%;margin-right:27%;margin-bottom:150px;font-size:18px;font-family:Verdana, Geneva, sans-serif;line-height:26pt;text-align:center;color:rgb(50,50,50);">2001 Stargate was an attempt to mimic the look and sound of the star gate sequence from 2001: A Space Odyssey.  It uses linear scaling on the vertical axis only, so it's not accurate, but it gets the point across.</p>
+<!--Mode 7 Project-->
+	<select id="levelselect">
+	  <option value="mariocircuit-1.png">Mario Circuit 1</option>
+		<option value="mariocircuit-2.png">Mario Circuit 2</option>
+		<option value="mariocircuit-3.png">Mario Circuit 3</option>
+		<option value="mariocircuit-4.png">Mario Circuit 4</option>
+		<option value="chocoisland-1.png">Choco Island 1</option>
+		<option value="chocoisland-2.png">Choco Island 2</option>
+		<option value="donutplains-1.png">Donut Plains 1</option>
+		<option value="donutplains-2.png">Donut Plains 2</option>
+		<option value="donutplains-3.png">Donut Plains 3</option>
+		<option value="ghostvalley-1.png">Ghost Valley 1</option>
+		<option value="ghostvalley-2.png">Ghost Valley 2</option>
+		<option value="ghostvalley-3.png">Ghost Valley 3</option>
+		<option value="koopabeach-1.png">Koopa Beach 1</option>
+		<option value="koopabeach-2.png">Koopa Beach 2</option>
+		<option value="vanillalake-1.png">Vanilla Lake 1</option>
+		<option value="vanillalake-2.png">Vanilla Lake 2</option>
+		<option value="bowsercastle-1.png">Bowser's Castle 1</option>
+		<option value="bowsercastle-2.png">Bowser's Castle 2</option>
+		<option value="bowsercastle-3.png">Bowser's Castle 3</option>
+		<option value="rainbowroad.png">Rainbow Road</option>
+		<option value="battlecourse-1.png">Battle Course 1</option>
+		<option value="battlecourse-2.png">Battle Course 2</option>
+		<option value="battlecourse-3.png">Battle Course 3</option>
+		<option value="battlecourse-4.png">Battle Course 4</option>
+	</select>
+
+	<script src="three.min.js"></script>
+	<script type="module">
+		
+		var WIDTH = window.innerWidth;
+		var HEIGHT = window.innerHeight;
+		var renderer = new THREE.WebGLRenderer({antialias:true});
+		renderer.setPixelRatio( window.devicePixelRatio * 1 ); //use to provide supersamping or undersampling
+		renderer.setSize(WIDTH, HEIGHT);
+		renderer.setClearColor(0xDDDDDD, 1);
+		document.body.appendChild(renderer.domElement);
+		var scene = new THREE.Scene();
+		var camera = new THREE.PerspectiveCamera(50, WIDTH/HEIGHT);
+		camera.position.z = 30;
+		camera.position.y = -5;
+		scene.add(camera);
+		var loader = new THREE.TextureLoader();
+
+		var texture = loader.load( 'images/mariocircuit-1.png' );
+		texture.minFilter = THREE.NearestFilter;
+		texture.magFilter = THREE.NearestFilter;
+		var material = new THREE.MeshBasicMaterial( { map: texture } );
+		var plane = new THREE.PlaneGeometry( 50, 50);
+		var levelmap = new THREE.Mesh( plane, material );
+		levelmap.rotation.set(-1.2, 0.0, 0.0);
+		scene.add(levelmap);
+
+		var backgroundTexture = loader.load('images/backgrounds/backgrounds (6).png');
+		backgroundTexture.magFilter = THREE.NearestFilter;
+		backgroundTexture.minFilter = THREE.NearestFilter;
+		scene.background = backgroundTexture;
+
+		var level = document.getElementById("levelselect").value;
+		function render() {
+			requestAnimationFrame(render);
+			renderer.render(scene, camera);
+			levelmap.rotation.z += 0.005
+			//check if level has changed, change textures if so
+			if(document.getElementById("levelselect").value != level){
+				//update map
+				level = document.getElementById("levelselect").value;
+				levelmap.material.map = THREE.ImageUtils.loadTexture('images/'+level);
+				levelmap.material.map.minFilter = THREE.NearestFilter;
+				levelmap.material.map.magFilter = THREE.NearestFilter;
+				levelmap.material.needsUpdate = true;
+				//update background
+				if(level.includes("mario")){
+					backgroundTexture = loader.load('images/backgrounds/backgrounds (6).png');
+				}
+				else if(level.includes("choco")){
+					backgroundTexture = loader.load('images/backgrounds/backgrounds (5).png');
+				}
+				else if(level.includes("bowser")){
+					backgroundTexture = loader.load('images/backgrounds/backgrounds (7).png');
+				}
+				else if(level.includes("ghost")){
+					backgroundTexture = loader.load('images/backgrounds/backgrounds (3).png');
+				}
+				else if(level.includes("koopa")){
+					backgroundTexture = loader.load('images/backgrounds/backgrounds (2).png');
+				}
+				else if(level.includes("vanilla")){
+					backgroundTexture = loader.load('images/backgrounds/backgrounds (1).png');
+				}
+				else if(level.includes("rainbow")){
+					backgroundTexture = loader.load('images/backgrounds/backgrounds (4).png');
+				}
+				else if(level.includes("donut")){
+					backgroundTexture = loader.load('images/backgrounds/backgrounds (0).png');
+				}
+				backgroundTexture.magFilter = THREE.NearestFilter;
+				backgroundTexture.minFilter = THREE.NearestFilter;
+				scene.background = backgroundTexture;
+
+			}
+		}
+		render();
+
+	</script>
+
 
 </body>
 
