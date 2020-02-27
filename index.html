@@ -100,7 +100,7 @@
 		var loader = new THREE.TextureLoader();
 
 		var texture = loader.load( 'images/mariocircuit-1.png' );
-		//texture.minFilter = THREE.NearestFilter;
+		texture.minFilter = THREE.NearestFilter;
 		texture.magFilter = THREE.NearestFilter;
 		var material = new THREE.MeshBasicMaterial( { map: texture } );
 		var plane = new THREE.PlaneGeometry( 50, 50);
@@ -123,7 +123,7 @@
 				//update map
 				level = document.getElementById("levelselect").value;
 				levelmap.material.map = THREE.ImageUtils.loadTexture('images/'+level);
-				//levelmap.material.map.minFilter = THREE.NearestFilter;
+				levelmap.material.map.minFilter = THREE.NearestFilter;
 				levelmap.material.map.magFilter = THREE.NearestFilter;
 				levelmap.material.needsUpdate = true;
 				//update background
