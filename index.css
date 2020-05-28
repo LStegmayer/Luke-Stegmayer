@@ -43,7 +43,7 @@ p {
   margin-right:25%;
   font-size:20px;
   line-height:26pt;
-  text-align:center;
+  text-align:left;
   color:rgb(40,40,40);
 }
 
@@ -52,4 +52,13 @@ hr {
   margin-top: 40px;
   margin-bottom:40px;
   border: 5px solid black;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  width:60%;
 }

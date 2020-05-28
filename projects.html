@@ -18,27 +18,27 @@
     <h2 id="Pico-8 Projects">Pico-8 Projects</h2>
     <hr>
     <h2>LockStep</h2>
-    <div align="center"><iframe src="Pico-8 Projects/lockstep.html" style="height:600px;width:600px;"></iframe></div>
+    <div><iframe src="Pico-8 Projects/lockstep.html" style="height:600px;width:600px;"></iframe></div>
     <p>LockStep is a game made for the Game Maker's Tool Kit game jam.  The theme was "only one", so this game uses only one button, X.</p>
     <hr>
     <h2>3D Starfield</h2>
-    <div align="center"><iframe src="Pico-8 Projects/starfield.html" style="height:600px;width:600px;"></iframe></div>
+    <div><iframe src="Pico-8 Projects/starfield.html" style="height:600px;width:600px;"></iframe></div>
     <p>This is one of a collection of 3D starfields I made.  Since Pico-8 does not support built-in 3D primitives, everything is rendered in software.</p>
     <hr>
     <h2>Fireplace</h2>
-    <div align="center"><iframe src="Pico-8 Projects/fireplace.html" style="height:600px;width:600px;"></iframe></div>
+    <div><iframe src="Pico-8 Projects/fireplace.html" style="height:600px;width:600px;"></iframe></div>
     <p>Fireplace is a simple but effective fire effect, based on <a href="http://fabiensanglard.net/doom_fire_psx/" target="_blank">this write-up by Fabien Sanglard.</a>  Because Pico-8 provides very limited processing power, I use interlacing to speed up rendering.</p>
     <hr>
     <h2>Superbars</h2>
-    <div align="center"><iframe src="Pico-8 Projects/superbars.html" style="height:600px;width:600px;"></iframe></div>
+    <div><iframe src="Pico-8 Projects/superbars.html" style="height:600px;width:600px;"></iframe></div>
     <p>Superbars is a silly fluke that came out of experiments with Fireplace.  Use X to change colors and Z to reset.  Epilepsy warning: holding X will rapidly flash the bars random colors.</p>
     <hr>
     <h2>2001 Stargate</h2>
-    <div align="center"><iframe src="Pico-8 Projects/stargate.html" style="height:600px;width:600px;"></iframe></div>
-    <p>2001 Stargate was an attempt to mimic the look and sound of the star gate sequence from 2001: A Space Odyssey.</p>
+    <div><iframe src="Pico-8 Projects/stargate.html" style="height:600px;width:600px;"></iframe></div>
+    <p >2001 Stargate was an attempt to mimic the look and sound of the star gate sequence from 2001: A Space Odyssey.  It uses linear scaling on the vertical axis only, so it's not accurate, but it gets the point across.</p>
     <hr>
     <!--Mode 7?-->
-    <div align="center" style="margin-top:0px;margin-bottom:0px;">
+    <div style="margin-top:0px;margin-bottom:0px;">
     	<select id="levelselect" style="font-size:14px;font-family:Lucida Sans Unicode,Lucida Grande,sans-serif;color:rgb(30,30,30);text-align:center;">
     	  <option value="mariocircuit-1.png">Mario Circuit 1</option>
     		<option value="mariocircuit-2.png">Mario Circuit 2</option>
@@ -68,7 +68,7 @@
     </div>
     <div id="mode7viewer"></div>
 
-  	<script src="ThreeJS/three.min.js"></script>
+  	<script src="ThreeJS Project/three.min.js"></script>
   	<script type="module">
   		var WIDTH = window.innerWidth/1.2;
   		var HEIGHT = window.innerHeight/1.2;
@@ -84,7 +84,7 @@
   		scene.add(camera);
   		var loader = new THREE.TextureLoader();
 
-  		var texture = loader.load( 'images/mariocircuit-1.png' );
+  		var texture = loader.load( 'threejsImages/mariocircuit-1.png' );
   		texture.minFilter = THREE.NearestFilter;
   		texture.magFilter = THREE.NearestFilter;
   		var material = new THREE.MeshBasicMaterial( { map: texture } );
@@ -93,7 +93,7 @@
   		levelmap.rotation.set(-1.2, 0.0, 0.0);
   		scene.add(levelmap);
 
-  		var backgroundTexture = loader.load('images/backgrounds/backgrounds (6).png');
+  		var backgroundTexture = loader.load('threejsImages/backgrounds/backgrounds (6).png');
   		backgroundTexture.magFilter = THREE.NearestFilter;
   		backgroundTexture.minFilter = THREE.NearestFilter;
   		scene.background = backgroundTexture;
@@ -107,34 +107,34 @@
   			if(document.getElementById("levelselect").value != level){
   				//update map
   				level = document.getElementById("levelselect").value;
-  				levelmap.material.map = THREE.ImageUtils.loadTexture('images/'+level);
+  				levelmap.material.map = THREE.ImageUtils.loadTexture('threejsImages/'+level);
   				levelmap.material.map.minFilter = THREE.NearestFilter;
   				levelmap.material.map.magFilter = THREE.NearestFilter;
   				levelmap.material.needsUpdate = true;
   				//update background
   				if(level.includes("mario") || level.includes("battlecourse-4")){
-  					backgroundTexture = loader.load('images/backgrounds/backgrounds (6).png');
+  					backgroundTexture = loader.load('threejsImages/backgrounds/backgrounds (6).png');
   				}
   				else if(level.includes("choco")){
-  					backgroundTexture = loader.load('images/backgrounds/backgrounds (5).png');
+  					backgroundTexture = loader.load('threejsImages/backgrounds/backgrounds (5).png');
   				}
   				else if(level.includes("bowser")){
-  					backgroundTexture = loader.load('images/backgrounds/backgrounds (7).png');
+  					backgroundTexture = loader.load('threejsImages/backgrounds/backgrounds (7).png');
   				}
   				else if(level.includes("ghost")){
-  					backgroundTexture = loader.load('images/backgrounds/backgrounds (3).png');
+  					backgroundTexture = loader.load('threejsImages/backgrounds/backgrounds (3).png');
   				}
   				else if(level.includes("koopa") || level.includes("battlecourse-2")){
-  					backgroundTexture = loader.load('images/backgrounds/backgrounds (2).png');
+  					backgroundTexture = loader.load('threejsImages/backgrounds/backgrounds (2).png');
   				}
   				else if(level.includes("vanilla") || level.includes("battlecourse-3")){
-  					backgroundTexture = loader.load('images/backgrounds/backgrounds (1).png');
+  					backgroundTexture = loader.load('threejsImages/backgrounds/backgrounds (1).png');
   				}
   				else if(level.includes("rainbow")){
-  					backgroundTexture = loader.load('images/backgrounds/backgrounds (4).png');
+  					backgroundTexture = loader.load('threejsImages/backgrounds/backgrounds (4).png');
   				}
   				else if(level.includes("donut") || level.includes("battlecourse-1")){
-  					backgroundTexture = loader.load('images/backgrounds/backgrounds (0).png');
+  					backgroundTexture = loader.load('threejsImages/backgrounds/backgrounds (0).png');
   				}
   				backgroundTexture.magFilter = THREE.NearestFilter;
   				backgroundTexture.minFilter = THREE.NearestFilter;
