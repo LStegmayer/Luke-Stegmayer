@@ -2,6 +2,7 @@ body {
   padding:0px;
   margin:auto;
   background-color:#f1f1f1;
+  background-attachment: fixed;
   color:rgb(20,20,20);
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
 }
@@ -62,4 +63,35 @@ img {
   margin-top: 60px;
   margin-bottom: 60px;
   width:1000px;
+}
+
+
+/*Sticky navbar stuff from w3schools*/
+#navbar {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  height: 80px;
+  line-height: 80px;
+  margin:0px;
+  display: block;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* Navbar links */
+#navbar a {
+  color: #000000;
+  padding: 20px;
+  text-align: center;
+}
+
+.spaced {
+  padding-bottom: 80px;
+  display: inline-block;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }

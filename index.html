@@ -7,16 +7,34 @@
   </head>
   <body>
     <h1>Luke Stegmayer</h1>
-    <div style="margin-top:40px;margin-bottom:40px;">
-      <a style="padding:20px;" href="index.html">Blog</a>
-      <a style="padding:20px;" href="projects.html">Projects</a>
-      <a style="padding:20px;" href="about.html"> About </a>
+
+    <div id="spacer"></div>
+    <div id="navbar">
+      <a href="index.html">Blog</a>
+      <a href="projects.html">Projects</a>
+      <a href="about.html"> About </a>
     </div>
+
+    <script> /*handles the "sticky" navigation bar*/
+      window.onscroll = function() {myFunction()};
+      var navbar = document.getElementById("navbar");
+      var spacer = document.getElementById("spacer");
+      var sticky = navbar.offsetTop;
+      function myFunction() {
+        if (window.pageYOffset >= sticky) {
+          navbar.classList.add("sticky");
+          spacer.classList.add("spaced");
+        } else { navbar.classList.remove("sticky");
+                 spacer.classList.remove("spaced");
+        }
+      }
+    </script>
+
 
     <hr>
     <!--blog goes here!-->
-    <h1>When AAA Game Dev Was Small</h1>
-    <p></p>
+    <!-- <h1>When AAA Game Dev Was Small</h1>
+    <p></p> */ -->
 
 
     <h1>Trilobite Fossils</h1>
