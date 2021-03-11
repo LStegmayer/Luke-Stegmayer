@@ -1,9 +1,9 @@
 body {
   padding:0px;
   margin:auto;
-  background-color:#f1f1f1;
+  background-color:#0f0f1f;
   background-attachment: fixed;
-  color:rgb(20,20,20);
+  color:rgb(250,250,250);
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
 }
 
@@ -21,7 +21,7 @@ h1 {
   margin-bottom:0px;
   font-size:70px;
   font-style:bold;
-  color:rgb(20,20,20);
+  color:rgb(255,255,255);
   text-align:center;
 }
 
@@ -30,12 +30,12 @@ h2 {
   margin-bottom:20px;
   font-size:60px;
   font-style:bold;
-  color:rgb(20,20,20);
+  color:rgb(250,250,250);
   text-align:center;
 }
 
 a {
-  color:black;
+  color:white;
   text-decoration: none;
 }
 
@@ -46,14 +46,14 @@ p {
   font-size:20px;
   line-height:26pt;
   text-align:left;
-  color:rgb(40,40,40);
+  color:rgb(245,245,245);
 }
 
 hr {
   width:50%;
   margin-top: 40px;
   margin-bottom:40px;
-  border: 5px solid black;
+  border: 5px solid grey;
 }
 
 img {
@@ -69,7 +69,7 @@ img {
 /*Sticky navbar stuff from w3schools*/
 #navbar {
   overflow: hidden;
-  background-color: #f1f1f1;
+  background-color: #0f0f1f;
   height: 80px;
   line-height: 80px;
   margin:0px;
@@ -79,7 +79,7 @@ img {
 
 /* Navbar links */
 #navbar a {
-  color: #000000;
+  color: #efefff;
   padding: 20px;
   text-align: center;
 }
