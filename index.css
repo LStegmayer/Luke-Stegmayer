@@ -1,7 +1,7 @@
 body {
   padding:0px;
   margin:auto;
-  background-color:#0f0f1f;
+  background-color:#09090f;
   background-attachment: fixed;
   color:rgb(250,250,250);
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
@@ -53,7 +53,7 @@ hr {
   width:50%;
   margin-top: 40px;
   margin-bottom:40px;
-  border: 5px solid grey;
+  border: 5px solid black;
 }
 
 img {
@@ -69,12 +69,12 @@ img {
 /*Sticky navbar stuff from w3schools*/
 #navbar {
   overflow: hidden;
-  background-color: #0f0f1f;
+  background-color: #09090f;
   height: 80px;
   line-height: 80px;
   margin:0px;
   display: block;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid #05050d;
 }
 
 /* Navbar links */
