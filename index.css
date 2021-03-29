@@ -47,6 +47,8 @@ p {
   line-height:26pt;
   text-align:left;
   color:rgb(245,245,245);
+  max-width: 600px;
+  text-indent: 2em;
 }
 
 hr {
@@ -62,7 +64,7 @@ img {
   margin-right: auto;
   margin-top: 60px;
   margin-bottom: 60px;
-  width:90%;
+  max-width: 800px;
 }
 
 
@@ -74,7 +76,6 @@ img {
   line-height: 80px;
   margin:0px;
   display: block;
-  border-bottom: 3px solid #05050d;
 }
 
 /* Navbar links */
