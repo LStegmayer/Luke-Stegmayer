@@ -40,7 +40,7 @@ a {
 }
 
 p {
-  width: 900px;
+  width: 90%;
   margin-left: auto;
   margin-right: auto;
   font-size:20px;
@@ -62,14 +62,14 @@ img {
   margin-right: auto;
   margin-top: 60px;
   margin-bottom: 60px;
-  width:1000px;
+  width:90%;
 }
 
 
 /*Sticky navbar stuff from w3schools*/
 #navbar {
   overflow: hidden;
-  background-color: #09090f;
+  background: linear-gradient(#09090f, #19191f);
   height: 80px;
   line-height: 80px;
   margin:0px;
