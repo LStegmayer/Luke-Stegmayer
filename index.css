@@ -43,12 +43,11 @@ p {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
-  font-size:20px;
-  line-height:26pt;
+  font-size:2.5vh;
+  line-height:5vh;
   text-align:left;
   color:rgb(245,245,245);
-  max-width: 600px;
-  text-indent: 2em;
+  max-width: 80vh;
 }
 
 hr {
