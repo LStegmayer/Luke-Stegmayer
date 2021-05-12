@@ -33,6 +33,7 @@
       height_canvas.width = height_img.width;
       height_canvas.height = height_img.height;
       height_canvas.getContext('2d').drawImage(height_img, 0, 0, height_img.width, height_img.height);
+      Render( {x:0,y:0}, 0, 50, 120, 120, 300, 800, 600 );
     }, false);
     height_img.src = '/Luke-Stegmayer/VoxelImages/D1.png';
 
@@ -82,8 +83,6 @@
     // position, viewing angle, height, horizon line position,
     // scaling factor for the height, the largest distance,
     // screen width and the screen height parameter
-
-    setTimeout(() => {  Render( {x:0,y:0}, 0, 50, 120, 120, 300, 800, 600 ); }, 2000);
 
 
   </script>
