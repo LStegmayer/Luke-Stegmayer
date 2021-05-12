@@ -45,7 +45,7 @@
 
       // Draw from front to the back (low z coordinate to high z coordinate)
       dz = 1;
-      z = 1;
+      z = 300; //usually 1
       while (z < distance) {
         // Find line on map. This calculation corresponds to a field of view of 90°
         var pleft = {x:(-cosphi*z - sinphi*z) + p.x, y:(sinphi*z - cosphi*z) + p.y};
