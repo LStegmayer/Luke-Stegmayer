@@ -30,7 +30,7 @@
       height_canvas.width = height_img.width;
       height_canvas.height = height_img.height;
       height_canvas.getContext('2d').drawImage(height_img, 0, 0, height_img.width, height_img.height);
-      Render( {x:70,y:70}, 0, 500, 120, 60, 500, 128, 72 );
+      Render( {x:70,y:70}, 0, 500, 120, 120, 500, 1280, 720 );
     }, false);
     height_img.src = '/Luke-Stegmayer/VoxelImages/D1.png';
 
@@ -45,7 +45,7 @@
       // Draw from front to the back (low z coordinate to high z coordinate)
       dz = 1;
       z = 1;
-      ctx.scale(10,1);
+      //ctx.scale(10,1);
       while (z < distance) {
         // Find line on map. This calculation corresponds to a field of view of 90°
         var pleft = {x:(-cosphi*z - sinphi*z) + p.x, y:(sinphi*z - cosphi*z) + p.y};
