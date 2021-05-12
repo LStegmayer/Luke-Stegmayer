@@ -59,7 +59,7 @@
         // Raster line and draw a vertical line for each segment
         for (var i = 0; i < screen_width; i++) {
           var height_on_screen = (height - height_canvas.getContext('2d').getImageData(pleft.x%150, pleft.y%150, 1, 1).data[0]) / z * scale_height + horizon;
-          if(i==1){console.log(height_canvas.getContext('2d').getImageData(70, 70, 1, 1).data);}
+          if(i==1){console.log(color_canvas.getContext('2d').getImageData(pleft.x%150, pleft.y%150, 1, 1).data);}
           ctx.strokeStyle = color_canvas.getContext('2d').getImageData(pleft.x%150, pleft.y%150, 1, 1).data;
           ctx.beginPath();
           ctx.moveTo(i, height_on_screen);
