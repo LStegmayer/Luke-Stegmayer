@@ -68,7 +68,7 @@
           }
           
           var terrain_color = "rgb(" + color_canvas.getContext('2d').getImageData((pleft.x+1500)%150, (pleft.y+1500)%150, 1, 1).data.slice(0,3).join() + ")";
-          if(i%20==0){
+          if(i%200==0){
             console.log("terrain: " + terrain_color);
           }
           
