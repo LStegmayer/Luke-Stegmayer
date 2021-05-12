@@ -62,7 +62,7 @@
           ctx.strokeStyle = terrain_color;
           ctx.beginPath();
           ctx.moveTo(i, height_on_screen);
-          ctx.lineTo(i, ybuffer[i]);
+          ctx.lineTo(i, ybuffer[i]+1);
           ctx.stroke();
           if (height_on_screen < ybuffer[i]) {
             ybuffer[i] = height_on_screen;
