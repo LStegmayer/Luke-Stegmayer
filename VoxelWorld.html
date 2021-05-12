@@ -61,10 +61,10 @@
         for (var i = 0; i < screen_width; i++) {
           var height_on_screen = (height - height_canvas.getContext('2d').getImageData((pleft.x+1500)%150, (pleft.y+1500)%150, 1, 1).data[0]) / z * scale_height + horizon;
          
-          if(i%20==0){
-            console.log(height_canvas.getContext('2d').getImageData(i%150, i%150, 1, 1).data[0]);
-            console.log("pleft.x=" + pleft.x);
-            console.log("pleft.y=" + pleft.y);
+          if(i%200==0){
+            console.log(height_canvas.getContext('2d').getImageData((pleft.x+1500)%150, (pleft.y+1500)%150, 1, 1).data[0]);
+            console.log("pleft.x=" + (pleft.x+1500)%150);
+            console.log("pleft.y=" + (pleft.y+1500)%150);
           }
           
           var terrain_color = "rgb(" + color_canvas.getContext('2d').getImageData((pleft.x+1500)%150, (pleft.y+1500)%150, 1, 1).data.slice(0,3).join() + ")";
