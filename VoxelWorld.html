@@ -30,7 +30,7 @@
       height_canvas.width = height_img.width;
       height_canvas.height = height_img.height;
       height_canvas.getContext('2d').drawImage(height_img, 0, 0, height_img.width, height_img.height);
-      Render( {x:70,y:70}, 0, 500, 120, 120, 500, 128, 72 );
+      Render( {x:70,y:70}, 0, 500, 120, 120, 50, 128, 72 );
     }, false);
     height_img.src = '/Luke-Stegmayer/VoxelImages/D1.png';
 
@@ -60,7 +60,6 @@
           var height_on_screen = Math.floor((height - height_canvas.getContext('2d').getImageData(Math.floor((pleft.x+4096))%1024, Math.floor((pleft.y+4096))%1024, 1, 1).data[0]) / z * scale_height + horizon);
           var terrain_color = "rgb(" + color_canvas.getContext('2d').getImageData(Math.floor((pleft.x+4096))%1024, Math.floor((pleft.y+4096))%1024, 1, 1).data.slice(0,3).join() + ")";          
           ctx.strokeStyle = terrain_color;
-          ctx.lineWidth = 1;
           ctx.beginPath();
           ctx.moveTo(i, height_on_screen);
           ctx.lineTo(i, ybuffer[i]);
