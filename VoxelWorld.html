@@ -67,7 +67,7 @@
             console.log("pleft.y=" + pleft.y);
           }
           
-          var terrain_color = "rbg(" + color_canvas.getContext('2d').getImageData(i%150, i%150, 1, 1).data.slice(0,3).join() + ")";
+          var terrain_color = "rgb(" + color_canvas.getContext('2d').getImageData(i%150, i%150, 1, 1).data.slice(0,3).join() + ")";
           if(i%20==0){
             console.log("terrain: " + terrain_color);
           }
