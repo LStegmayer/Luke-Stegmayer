@@ -12,6 +12,7 @@
   </body>
   <script>
 
+    var heightmap; //TODO
     var c = document.getElementById("glCanvas");
     var ctx = c.getContext("2d");
 
@@ -30,7 +31,7 @@
       height_canvas.width = height_img.width;
       height_canvas.height = height_img.height;
       height_canvas.getContext('2d').drawImage(height_img, 0, 0, height_img.width, height_img.height);
-      Render( {x:0,y:0}, 250, 120, 120, 50, 1280, 720 );
+      Render( {x:70,y:70}, 0, 100, 100, 50, 80, 1280, 720 );
     }, false);
     height_img.src = '/Luke-Stegmayer/VoxelImages/D1.png';
 
