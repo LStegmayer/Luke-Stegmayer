@@ -1,0 +1,92 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Voxel World</title>
+    <style> body { margin: 0; } </style>
+  </head>
+
+  <body>
+    <canvas id="glCanvas" width="1280" height="720"></canvas>
+  </body>
+  <script>
+
+    var heightmap; //TODO
+    var c = document.getElementById("glCanvas");
+    var ctx = c.getContext("2d");
+
+    var color_canvas = document.createElement('canvas');
+    var color_img = new Image();
+    color_img.crossOrigin = "Anonymous";
+    color_img.addEventListener('load', function() {
+      color_canvas.width = color_img.width;
+      color_canvas.height = color_img.height;
+      color_canvas.getContext('2d').drawImage(color_img, 0, 0, color_img.width, color_img.height);
+    }, false);
+    color_img.src = 'C1W.png';
+
+    var height_canvas = document.createElement('canvas');
+    var height_img = new Image();
+    height_img.crossOrigin = "Anonymous";
+    height_img.addEventListener('load', function() {
+      height_canvas.width = height_img.width;
+      height_canvas.height = height_img.height;
+      height_canvas.getContext('2d').drawImage(height_img, 0, 0, height_img.width, height_img.height);
+    }, false);
+    height_img.src = 'D1.png';
+
+    function Render(p, phi, height, horizon, scale_height, distance, screen_width, screen_height) {
+      // precalculate viewing angle parameters
+      var sinphi = Math.sin(phi);
+      var cosphi = Math.cos(phi);
+
+      // initialize visibility array. Y position for each column on screen
+      ybuffer = new Array(screen_width).fill(screen_height);
+
+      // Draw from front to the back (low z coordinate to high z coordinate)
+      dz = 1;
+      z = 1;
+      while (z < distance) {
+        // Find line on map. This calculation corresponds to a field of view of 90°
+        var pleft = {x:(-cosphi*z - sinphi*z) + p.x, y:(sinphi*z - cosphi*z) + p.y};
+        var pright = {x:(cosphi*z - sinphi*z) + p.x, y:(-sinphi*z - cosphi*z) + p.y};
+
+        // segment the line
+        dx = (pright.x - pleft.x) / screen_width
+        dy = (pright.y - pleft.y) / screen_width
+
+        // Raster line and draw a vertical line for each segment
+        for (var i = 0; i < screen_width; i++) {
+          var height_on_screen = (height - height_canvas.getContext('2d').getImageData(pleft.x%150, pleft.y%150, 1, 1).data[0]) / z * scale_height + horizon;
+          if(i==1){console.log(height_canvas.getContext('2d').getImageData(70, 70, 1, 1).data);}
+          ctx.strokeStyle = color_canvas.getContext('2d').getImageData(pleft.x%150, pleft.y%150, 1, 1).data;
+          ctx.beginPath();
+          ctx.moveTo(i, height_on_screen);
+          ctx.lineTo(i, ybuffer[i]);
+          ctx.stroke();
+          if (height_on_screen < ybuffer[i]) {
+            ybuffer[i] = height_on_screen;
+          }
+          pleft.x += dx
+          pleft.y += dy
+        }
+
+        // Go to next line and increase step size with distance
+        z += dz
+        dz += 0.2
+      }
+    }
+
+    // Call the render function with the camera parameters:
+    // position, viewing angle, height, horizon line position,
+    // scaling factor for the height, the largest distance,
+    // screen width and the screen height parameter
+
+    setTimeout(() => {  Render( {x:0,y:0}, 0, 50, 120, 120, 300, 800, 600 ); }, 2000);
+
+
+  </script>
+
+
+</html>
