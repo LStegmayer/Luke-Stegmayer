@@ -8,7 +8,7 @@
   </head>
 
   <body>
-    <canvas id="glCanvas" width="320" height="240"></canvas>
+    <canvas id="glCanvas" width="1280" height="720"></canvas>
   </body>
   <script>
 
@@ -31,7 +31,7 @@
       height_canvas.width = height_img.width;
       height_canvas.height = height_img.height;
       height_canvas.getContext('2d').drawImage(height_img, 0, 0, height_img.width, height_img.height);
-      Render( {x:70,y:70}, 0, 500, 120, 120, 500, 320, 240 );
+      Render( {x:70,y:70}, 0, 500, 120, 120, 500, 1280, 720 );
     }, false);
     height_img.src = '/Luke-Stegmayer/VoxelImages/D1.png';
 
