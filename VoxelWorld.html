@@ -33,7 +33,7 @@
       height_canvas.width = height_img.width;
       height_canvas.height = height_img.height;
       height_canvas.getContext('2d').drawImage(height_img, 0, 0, height_img.width, height_img.height);
-      Render( {x:0,y:0}, 0, 50, 120, 120, 300, 800, 600 );
+      Render( {x:0,y:0}, 0, 50, 120, 120, 30, 800, 600 );
     }, false);
     height_img.src = '/Luke-Stegmayer/VoxelImages/D1.png';
 
@@ -67,11 +67,7 @@
             console.log("pleft.y=" + (pleft.y+1500)%150);
           }
           
-          var terrain_color = "rgb(" + color_canvas.getContext('2d').getImageData((pleft.x+1500)%150, (pleft.y+1500)%150, 1, 1).data.slice(0,3).join() + ")";
-          if(i%200==0){
-            console.log("terrain: " + terrain_color);
-          }
-          
+          var terrain_color = "rgb(" + color_canvas.getContext('2d').getImageData((pleft.x+1500)%150, (pleft.y+1500)%150, 1, 1).data.slice(0,3).join() + ")";          
           ctx.strokeStyle = terrain_color;
           ctx.beginPath();
           ctx.moveTo(i, height_on_screen);
