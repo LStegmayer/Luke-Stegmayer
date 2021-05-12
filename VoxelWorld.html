@@ -12,7 +12,6 @@
   </body>
   <script>
 
-    var heightmap; //TODO
     var c = document.getElementById("glCanvas");
     var ctx = c.getContext("2d");
 
@@ -31,7 +30,7 @@
       height_canvas.width = height_img.width;
       height_canvas.height = height_img.height;
       height_canvas.getContext('2d').drawImage(height_img, 0, 0, height_img.width, height_img.height);
-      Render( {x:70,y:70}, 0, 500, 120, 120, 500, 1280, 720 );
+      Render( {x:70,y:70}, 0, 500, 120, 12, 500, 128, 72 );
     }, false);
     height_img.src = '/Luke-Stegmayer/VoxelImages/D1.png';
 
@@ -56,11 +55,12 @@
         dy = (pright.y - pleft.y) / screen_width
 
         // Raster line and draw a vertical line for each segment
-        for (var i = 0; i < screen_width; i+=20) {
+        for (var i = 0; i < screen_width; i++) {
           var height_on_screen = Math.floor((height - height_canvas.getContext('2d').getImageData(Math.floor((pleft.x+4096))%1024, Math.floor((pleft.y+4096))%1024, 1, 1).data[0]) / z * scale_height + horizon);
           var terrain_color = "rgb(" + color_canvas.getContext('2d').getImageData(Math.floor((pleft.x+4096))%1024, Math.floor((pleft.y+4096))%1024, 1, 1).data.slice(0,3).join() + ")";          
           ctx.strokeStyle = terrain_color;
-          ctx.lineWidth = 20;
+          ctx.lineWidth = 1;
+          ctx.scale(10, 10);
           ctx.beginPath();
           ctx.moveTo(i, height_on_screen);
           ctx.lineTo(i, ybuffer[i]);
@@ -68,8 +68,8 @@
           if (height_on_screen < ybuffer[i]) {
             ybuffer[i] = height_on_screen;
           }
-          pleft.x += 20*dx
-          pleft.y += 20*dy
+          pleft.x += dx
+          pleft.y += dy
         }
 
         // Go to next line and increase step size with distance
