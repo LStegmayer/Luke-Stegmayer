@@ -30,7 +30,7 @@
       height_canvas.width = height_img.width;
       height_canvas.height = height_img.height;
       height_canvas.getContext('2d').drawImage(height_img, 0, 0, height_img.width, height_img.height);
-      Render( {x:70,y:70}, 0, 250, 120, 150, 1000, 128, 72 );
+      Render( {x:70,y:70}, 0, 350, 120, 300, 1000, 128, 72 );
     }, false);
     height_img.src = '/Luke-Stegmayer/VoxelImages/D1.png';
 
@@ -73,7 +73,7 @@
 
         // Go to next line and increase step size with distance
         z += dz
-        //dz += 0.2
+        dz += 0.2
       }
     }
 
