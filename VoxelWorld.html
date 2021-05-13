@@ -57,7 +57,7 @@
 
         // Raster line and draw a vertical line for each segment
         for (var i = 0; i < screen_width; i++) {
-          var height_on_screen = Math.floor((height - height_canvas.getContext('2d').getImageData(Math.floor((pleft.x+4096))%1024, Math.floor((pleft.y+4096))%1024, 1, 1).data[0]) / z * scale_height + horizon)/10;
+          var height_on_screen = Math.floor(((height - height_canvas.getContext('2d').getImageData(Math.floor((pleft.x+4096))%1024, Math.floor((pleft.y+4096))%1024, 1, 1).data[0]) / z * scale_height + horizon)/10);
           var terrain_color = "rgb(" + color_canvas.getContext('2d').getImageData(Math.floor((pleft.x+4096))%1024, Math.floor((pleft.y+4096))%1024, 1, 1).data.slice(0,3).join() + ")";
           ctx.strokeStyle = terrain_color;
           ctx.beginPath();
