@@ -30,7 +30,7 @@
       height_canvas.width = height_img.width;
       height_canvas.height = height_img.height;
       height_canvas.getContext('2d').drawImage(height_img, 0, 0, height_img.width, height_img.height);
-      Render( {x:70,y:70}, 90, 350, 120, 300, 1000, 320, 180 );
+      Render( {x:70,y:70}, 90, 350, 120, 300, 1000, 1280, 720 );
     }, false);
     height_img.src = '/Luke-Stegmayer/VoxelImages/D1.png';
 
@@ -45,7 +45,7 @@
       // Draw from front to the back (low z coordinate to high z coordinate)
       dz = 1;
       z = 40;
-      ctx.scale(4,4);
+      //ctx.scale(4,4);
       while (z < distance) {
         // Find line on map. This calculation corresponds to a field of view of 90°
         var pleft = {x:(-cosphi*z - sinphi*z) + p.x, y:(sinphi*z - cosphi*z) + p.y};
@@ -58,7 +58,7 @@
         // Raster line and draw a vertical line for each segment
         for (var i = 0; i < screen_width; i++) {
           var height_on_screen = Math.floor((height - height_canvas.getContext('2d').getImageData(Math.floor((pleft.x+4096))%1024, Math.floor((pleft.y+4096))%1024, 1, 1).data[0]) / z * scale_height + horizon)/10;
-          var terrain_color = "rgb(" + color_canvas.getContext('2d').getImageData(Math.floor((pleft.x+4096))%1024, Math.floor((pleft.y+4096))%1024, 1, 1).data.slice(0,3).join() + ")";          
+          var terrain_color = "rgb(" + color_canvas.getContext('2d').getImageData(Math.floor((pleft.x+4096))%1024, Math.floor((pleft.y+4096))%1024, 1, 1).data.slice(0,3).join() + ")";
           ctx.strokeStyle = terrain_color;
           ctx.beginPath();
           ctx.moveTo(i, height_on_screen);
