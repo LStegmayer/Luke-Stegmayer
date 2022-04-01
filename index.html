@@ -5,6 +5,7 @@
     <title>Luke Stegmayer</title>
     <link rel="stylesheet" href="index.css">
     <link rel="shortcut icon" href="favicon.png" />
+    <script src="navbar.js"></script> 
   </head>
   <body>
     <h1>Luke Stegmayer</h1>
@@ -15,21 +16,6 @@
       <a href="projects.html">Projects</a>
       <a href="about.html"> About </a>
     </div>
-
-    <script> /*handles the "sticky" navigation bar*/
-      window.onscroll = function() {myFunction()};
-      var navbar = document.getElementById("navbar");
-      var spacer = document.getElementById("spacer");
-      var sticky = navbar.offsetTop;
-      function myFunction() {
-        if (window.pageYOffset >= sticky) {
-          navbar.classList.add("sticky");
-          spacer.classList.add("spaced");
-        } else { navbar.classList.remove("sticky");
-                 spacer.classList.remove("spaced");
-        }
-      }
-    </script>
 
 
     <hr>

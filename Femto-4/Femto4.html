@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Luke Stegmayer</title>
+    <link rel="stylesheet" href="../index.css">
+    <link rel="shortcut icon" href="../favicon.png" />
+    <script defer src="pixelTool.js"></script> 
+    <!--<script defer src="../navbar.js"></script> -->
+  </head>
+
+  <body>
+    <h1>Luke Stegmayer</h1>
+
+    <div id="spacer"></div>
+    <div id="navbar">
+      <a href="../index.html">Blog</a>
+      <a href="../projects.html">Projects</a>
+      <a href="../about.html"> About </a>
+    </div>
+
+    <!--Map + Pixel Editor Go Here-->
+    <div style="display: flex; align-items: start; justify-content: space-around;">
+        <div style="width: 340px; padding: 0px; color: black; background-color: lightgray; border-radius: 10px; 
+        user-select: none; border:1px solid gray;">
+            <h3>Tile Sheet</h3>
+            <canvas id="TileSheet" width="320" height="320" style="border:1px solid white; image-rendering: crisp-edges;"></canvas>
+        </div>
+
+        <div style="width: 180px; padding: 0px; color: black; background-color: lightgray; border-radius: 10px; 
+        user-select: none; border:1px solid gray;">
+            <h3>Tile Editor</h3>
+            <canvas id="TileEditor" width="160" height="160" style="border:1px solid white; image-rendering: crisp-edges;"></canvas>
+            <div style="font-weight:200; font-size: 14px; background-color: white; border-radius: 0px 0px 10px 10px; margin: 0px; padding-top: 5px; padding-bottom: 5px;">
+                Foreground color:
+                <select name="FGColor" id="FGColor">
+                    <option value="white">White</option>
+                    <option value="black">Black</option>
+                    <option value="#45FF91">Green</option>
+                    <option value="#FFEE19">Yellow</option>
+                    <option value="#FFA626">Orange</option>
+                    <option value="#CC292B">Red</option>
+                    <option value="#2949CB">Blue</option>
+                    <option value="#5B0F9A">Purple</option>
+                </select>
+                <br>Background color (Transparent for sprites):
+                <select name="BGColor" id="BGColor">
+                    <option value="white">White</option>
+                    <option value="black">Black</option>
+                    <option value="#45FF91">Green</option>
+                    <option value="#FFEE19">Yellow</option>
+                    <option value="#FFA626">Orange</option>
+                    <option value="#CC292B">Red</option>
+                    <option value="#2949CB">Blue</option>
+                    <option value="#5B0F9A">Purple</option>
+                </select>
+            </div>
+        </div>
+
+        <div style="width: 468px; padding: 0px; color: black; background-color: lightgray; border-radius: 10px; border:1px solid gray; user-select: none;">
+            <h3>Map Editor</h3>
+            <canvas id="MapEditor" width="448" height="448" style="border:1px solid white; image-rendering: crisp-edges;"></canvas>
+            <div style="font-weight:200; font-size: 14px; background-color: white; border-radius: 0px 0px 10px 10px; margin: 0px; padding-top: 5px; padding-bottom: 5px;">
+                <button id="exportButton">Export to PNG</button>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>
