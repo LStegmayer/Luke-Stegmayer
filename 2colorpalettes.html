@@ -11,12 +11,14 @@
   
   <p>This is a color palette 'generator' - actually, it's selecting colors from a pre-made color palette in a pre-defined way, so it'll always generate the same colors in the same order and repeat after 32 combinations.  The upside is that the colors have been chosen by an alleged human (me), so they should be more aesthetically appealing than random generation.</p>
   
-  <canvas id="color1"></canvas>
-  <canvas id="color2"></canvas>
-  <button onclick="newColor()">Generate</button>
-  <br>
-  <span id="color1label"></span>
-  <span id="color2label"></span>
+  <div>
+    <canvas id="color1"></canvas>
+    <canvas id="color2"></canvas>
+    <button onclick="newColor()">Generate</button>
+    <br>
+    <span id="color1label"></span>
+    <span id="color2label"></span>
+  </div>
   <script>
     var canvas1 = document.getElementById("color1");
     var ctx1 = canvas1.getContext('2d');
