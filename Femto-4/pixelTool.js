@@ -79,12 +79,14 @@ exportButton.addEventListener("mousedown", function(e)
 {
     exportTileMap(e);
 });
-/**--------------------------------------------------------------------------------
- * Script and functions 
- * -------------------------------------------------------------------------------- */
 
 //on load, we'll try to fetch a tilesheet from storage, or create one if it isn't there
 window.onload = loadFromStorage();
+
+
+/**--------------------------------------------------------------------------------
+ * Script and functions 
+ * -------------------------------------------------------------------------------- */
 
 //TODO: need to implement saving and loading an object from storage, 
 //which will require conversion to a string.  
