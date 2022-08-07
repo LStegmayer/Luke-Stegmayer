@@ -1,0 +1,122 @@
+<h1 id="a-custom-nes-palette">A Custom NES Palette</h1>
+<h3 id="creating-a-deliberately-inaccurate-hopefully-more-pleasing-picture">Creating a deliberately inaccurate, hopefully more pleasing picture</h3>
+<p>Date: August 6th, 2022</p>
+<p>Image: Palette
+Image description: This is my palette.  There are many like it, but this one is mine.</p>
+<p>The NES palette is a tricky thing.  The PPU (Picture Processing Unit) generates the video output directly in composite, rather than RGB; as I understand it, the primary difficulty is that the NES video is out of spec, and how those out-of-spec colors are handled is undefined.  There&#39;s also something to do with the properties of the integrated circuit&#39;s design and/or manufacturing, which produces unpredictable and inconsistent output.  It can all get <a href="https://www.nesdev.org/wiki/NTSC_video">quite complicated</a> and I don&#39;t pretend to get most of it.  In any case, there can never be a single &quot;true&quot; or &quot;accurate&quot; palette.  Nevertheless, people have created RGB palettes for use with emulators (both hardware and software) and NES/Famicom hardware mods, and some of them aim to closely reproduce how NES video would appear on consumer TVs or professional monitors of the day.  While the word &quot;accurate&quot; may not apply to any NES palette, perhaps these palettes could be described as &quot;authentic.&quot;</p>
+<p>The work put into these authentic palettes is extensive and far beyond my knowledge.  Rather, I&#39;m aiming for the different goal of creating an NES palette that I find more aesthetically pleasing.  The NES produces a range of colors that are mostly unsaturated, a bit dark, and somewhat naturalistic.  This was a great strength, I suspect, of the system in its time.  In contrast to the harsh, artificial primary colors of some of its competitors or home computer counterparts, the NES&#39;s palette enables convincing depictions of foliage, dirt, dimly-lit scenes, and skies that don&#39;t sear your eyes.</p>
+<p>Image: NES FirebrandX Smooth Palette
+Image description: The &quot;Smooth&quot; palette by FirebrandX, one of the most popular authentic palettes.</p>
+<p>Nevertheless, while it holds up well for its time, and I have nothing but praise for the designers of the NES PPU, there are swathes of colors here that I find unappealing.  Foremost among them are the colors that the Angry Video Game Nerd liked to refer to as &quot;puke greens&quot;, dark yellow-greens that can certainly serve a purpose, but are often used for deeply unattractive backgrounds.  Additionally, the NES lacks a convincing yellow (with a dim gold being the closest), there&#39;s no bright and saturated red, and the blue-greens are too dark and saturated for my tastes.  </p>
+<p>Still, you can&#39;t make subjective improvements by just looking at a standalone palette and changing the colors you don&#39;t like.  You have to look at how the colors are actually used in games.  Fortunately, thanks to the features of FCEUX, it&#39;s trivial to edit the palette while playing games, so I took the approach of playing some of my favorite or otherwise popular NES games, modifying colors with HSV to make the games either resemble what arcade versions/later games/artwork indicates the artists aimed for, or otherwise simply what I like looking at.  I believe I started with the &quot;Unsaturated V6&quot; palette, included with FCEUX, for this.</p>
+<p>Since the various artists for these games no doubt used the same colors for different purposes, it&#39;s impossible to make a one-size-fits-all change.  That said, I found that many of the alterations I made provided benefits to a surprisingly large number of games, which I attribute to the limited NES palette and common scenes/themes of NES games often constraining artists to use the same colors for the same purposes.  Below, I&#39;ll go through some comparisons of these games, and I&#39;ll add a few thoughts for each one on how I feel the new palette compares, in terms of subjective appeal, to FirebrandX&#39;s rip of the NES Classic palette, because that palette is pretty authentic and because it&#39;s among the most widely-used palettes due to its creation and usage by Nintendo.  Obviously, the point is not to say my palette is better than the NES Classic palette, because they&#39;re aiming for totally different goals.</p>
+<p>Table of contents/list: 
+Super Mario Bros.
+Balloon Fight
+Tennis
+Pac-Man
+Galaga
+Dig Dug
+Dr. Mario
+The Legend of Zelda
+Zelda II
+Sweet Home
+Summer Carnival &#39;92 Recca
+Super Mario Bros. 2
+Super Mario Bros. 3
+Mega Man 2
+Jurassic Park
+Metroid
+Micro Mages
+Kirby&#39;s Adventure
+Castlevania
+Battletoads
+Blaster Master
+Contra
+Ninja Gaiden
+Mike Tyson&#39;s Punch-Out!!
+Vice: Project Doom</p>
+<hr>
+<p>Without further ado, let&#39;s start with the greatest NES game of all.</p>
+<h2 id="super-mario-bros-">Super Mario Bros.</h2>
+<p>![Super Mario Bros.][/Images/SMB.Classic.png]
+![Super Mario Bros.][/Images/SMB.New.png]</p>
+<p>Off the bat, we&#39;re starting with an example where I&#39;m explicitly going against developer intent.  Miyamoto <a href="https://mobile.twitter.com/MarioBrothBlog/status/1249412399867801601">stated in an interview</a> that he chose the sky in Super Mario Bros. to be a bit purplish.  In the new palette, it&#39;s now a fresh, bright blue sky, in line with later games.  The once-dull Item Blocks are now a brighter gold, and the bushes and pipes are a little brighter and less saturated now.  The brown of the bricks is a little less green as well.  Mario himself sports brighter, bolder red clothes and hair, arms, and shoes that are a bit less green.  The end result is a game closer to the bright cartoon aesthetic of the series.</p>
+<p>![Super Mario Bros.][/Images/SMB.Classic2.png]
+![Super Mario Bros.][/Images/SMB.New2.png]</p>
+<p>As we head underground, the primary difference is that everything is brighter and the blue-green bricks have become more of a pure blue.  I like this change, but I imagine that some will feel the brighter colors are less in keeping with the dark underground theme.</p>
+<p>![Super Mario Bros.][/Images/SMB.Classic3.png]
+![Super Mario Bros.][/Images/SMB.New3.png]</p>
+<p>In the ocean, much as above ground, the water is less purple, and the greens of the rock are a little less radioactive now.</p>
+<p>![Super Mario Bros.][/Images/SMB.Classic4.png]
+![Super Mario Bros.][/Images/SMB.New4.png]</p>
+<p>Finally, as we head into the castle and face off against a fake Bowser, note that the lava now glows.</p>
+<h2 id="balloon-fight">Balloon Fight</h2>
+<p>![Balloon Fight][/Images/BF.Classic.png]
+![Balloon Fight][/Images/BF.New.png]</p>
+<p>Leaving behind Mario for a little bit, we&#39;ll look at Balloon Fight (programmed by the legendary Satoru Iwata!).  I show the title screen here to emphasize the difference in the shade of yellow used in the title; a few games use this color for titles, and I prefer the new pale yellow over the previous dull slightly greenish yellow.</p>
+<h2 id="castlevania">Castlevania</h2>
+<p>![Castlevania][/Images/Castlevania_Classic.png]
+![Castlevania][/Images/Castlevania_New.png]</p>
+<p>Heading into the castle of Count Dracula, here&#39;s an example where the bright tones of the new palette may be a downside for some.  The rusted red gates are looking a bit too polished.  On the plus side, both the moon and Simon Belmont now have more contrast against the dark background.</p>
+<h2 id="contra">Contra</h2>
+<p>![Contra][/Images/Contra_Classic.png]
+![Contra][/Images/Contra_New.png]</p>
+<p>The title screen of Contra is a bit of a mixed bag.  I greatly prefer the new logo, but the NES Classic colors render the muscular heroes with a healthy pink flesh tone, while they&#39;re more orange with the new palette.</p>
+<p>![Contra][/Images/Contra_Classic2.png]
+![Contra][/Images/Contra_New2.png]</p>
+<p>Getting into gameplay, there&#39;s a huge difference with the rocky cliffs; whereas before they were a sickly shade of green-brown, now they&#39;re just brown - more appealing to me, and also a greater contrast against the ground you can walk on.  The trees and grass no longer glow green and appear more natural.  The mountains in the background stick out a bit more, though.</p>
+<h2 id="dr-mario">Dr. Mario</h2>
+<p>![Dr. Mario][/Images/D.M_Classic.png]
+![Dr. Mario][/Images/D.M_New.png]</p>
+<p>![Dr. Mario][/Images/D.M_Classic2.png]
+![Dr. Mario][/Images/D.M_New2.png]</p>
+<p>I&#39;ll be frank.  I think Dr. Mario&#39;s colors on the Classic are ugly, full stop.  The logo, which is present at all times in gameplay, is again that sickly shade of green-yellow -- fitting, I suppose, for a game where you fight viruses, but off-putting nonetheless.  Dr. Mario himself sports green-tinted hair, and the viruses are dull.  With the new palette, these issues are fixed: the title is a healthy yellow, Mario has given up his imitation of the Joker, and the viruses have more contrast between them.  An all-around win for the new palette, in my book.</p>
+<h2 id="galaga">Galaga</h2>
+<p>![Galaga][/Images/G_Classic.png]
+![Galaga][/Images/G_New.png]</p>
+<p>I don&#39;t have much to say here, but that the new palette brings the game closer to the saturated RGB colors of the original arcade game.</p>
+<h2 id="pac-man">Pac-Man</h2>
+<p>Pac-Man&#39;s (official) NES port has a somewhat middling reputation due to its dim, dull colors, an unfortunate result of the translation from arcade to NES.  With the new palette, the ghosts, dots, score text, and Pac-Man are brighter and more distinct, and thus closer to the arcade.</p>
+<h2 id="super-mario-bros-2">Super Mario Bros. 2</h2>
+<p>![Super Mario Bros. 2][/Images/SMB.2_Classic.png]
+![Super Mario Bros. 2][/Images/SMB.2_New.png]</p>
+<p>The game is brighter and bit less strongly saturated in the greens.  The ground appears more sand-like.  I&#39;ve never much liked Super Mario Bros. 2&#39;s color choices, but it&#39;s helped a bit here.</p>
+<h2 id="super-mario-bros-3">Super Mario Bros. 3</h2>
+<p>![Super Mario Bros. 3][/Images/SMB.3_Classic.png]
+![Super Mario Bros. 3][/Images/SMB.3_New.png]
+![Super Mario Bros. 3][/Images/SMB.3_Classic2.png]
+![Super Mario Bros. 3][/Images/SMB.3_New2.png]</p>
+<p>The best NES game, in my book, now sports a bit bluer of a sky, brighter item boxes, and more contrast on the map screen, although the color of the paths on the map is slightly less distinct compared to the surround area now.  Still, I think it&#39;s a win.</p>
+<h2 id="the-legend-of-zelda">The Legend of Zelda</h2>
+<p>![The Legend of Zelda][/Images/TLOZ_Classic.png]
+![The Legend of Zelda][/Images/TLOZ_New.png]</p>
+<p>Hyrule now appears a bit more sun-drenched, with rivers, sand, and mountains that are much less dull.  Link sports clothes made of cloth rather than nuclear waste.</p>
+<h2 id="zelda-ii-the-adventure-of-link">Zelda II: The Adventure of Link</h2>
+<p>TODO.</p>
+<h2 id="metroid">Metroid</h2>
+<p>![Metroid][/Images/M_Classic.png]
+![Metroid][/Images/M_New.png]</p>
+<p>Metroid&#39;s title screen is changed quite a bit, thanks to the planet Zebes&#39;s conversion from green to brown.  The planet is depicted as brown in later games, including Metroid&#39;s remake, Metroid: Zero Mission -- so it fits.  Even on its own merits, I feel brown better represents a planet with a harsh, almost lifeless surface.  Maybe the original artists saw the planet as being covered in moss, though.  Who knows.</p>
+<p>![Metroid][/Images/M_Classic2.png]
+![Metroid][/Images/M_New2.png]</p>
+<p>In game, Samus appears more like her normal self.  On the other hand, maybe you prefer the darker rock tones of the Classic palette.  We are underground, after all.</p>
+<h2 id="jurassic-park">Jurassic Park</h2>
+<p>![Jurassic Park][/Images/JP_Classic.png]
+![Jurassic Park][/Images/JP_New.png]</p>
+<p>Jurassic Park on NES, a bit of a guilty pleasure of mine.  I love the media surrounding the original film, before it received its countless middling-to-bad sequels.  Needless to say, the Jurassic Park logo holds up much better with the new palette.  </p>
+<p>![Jurassic Park][/Images/JP_Classic2.png]
+![Jurassic Park][/Images/JP_New2.png]</p>
+<p>In game, the ground appears like dirt, rather than moss or mud.  I think this is actually the intent, but I can&#39;t say for sure.  The Dilo fits in better and doesn&#39;t look quite as distinctly low-color-spritish.</p>
+<h2 id="mega-man-2">Mega Man 2</h2>
+<p>![Mega Man 2][/Images/MM2_Classic.png]
+![Mega Man 2][/Images/MM2_New.png]</p>
+<p>Mega Man&#39;s body is less greenish now, which fits in with some of his later depictions, although other later depictions retain that blue-green.  The big red platforms with faces are probably a little too bright now.  Win some, lose some.</p>
+<h2 id="battletoads">Battletoads</h2>
+<p>![Battletoads][/Images/B_Classic.png]
+![Battletoads][/Images/B_New.png]</p>
+<p>Battletoads has always been kind of an ugly game, and this new palette doesn&#39;t fix that.  Now the greenish blocks appear darker and closer to brown, but still with a green highlight, which is probably a negative change, although the enemies now stand out more against the background, which is good.</p>
+<h2 id="kirby-s-adventure">Kirby&#39;s Adventure</h2>
+<p>![Kirby][/Images/KA_Classic.png]
+![Kirby][/Images/KA_New.png]</p>
+<p>Kirby&#39;s Adventure is a masterclass in making the most of the NES palette, so it&#39;s not likely to see much improvement.  The main difference here is that the gold color used throughout the game is brighter, which I think is a good change.</p>
