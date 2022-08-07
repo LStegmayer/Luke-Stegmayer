@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <title>Correlating My Contents</title>
-    <link rel="stylesheet" href="../../index.css">
+    <link rel="stylesheet" href="NES_palette.css">
     <link rel="shortcut icon" href="../../favicon.png" />
     <script src="../../navbar.js"></script> 
   </head>
@@ -20,35 +20,42 @@
 
     <h1 id="a-custom-nes-palette">A Custom NES Palette</h1>
     <h3 id="creating-a-deliberately-inaccurate-hopefully-more-pleasing-picture">Creating a deliberately inaccurate, hopefully more pleasing picture</h3>
-    <p>Date: August 6th, 2022</p>
-    <img src="Images/palette.png" alt="The PleasantNESs palette.">
-    Image description: This is my palette.  There are many like it, but this one is mine.</p>
+    <p>August 6th, 2022</p>
+    <div style="margin:auto;">
+        <img src="Images/palette.png" alt="The PleasantNESs palette." style="width: 100%; height: 100%;">
+        <p>This is my palette.  There are many like it, but this one is mine.</p>
+    </div>
+    <hr>
     <p>The NES palette is a tricky thing.  The PPU (Picture Processing Unit) generates the video output directly in composite, rather than RGB; as I understand it, the primary difficulty is that the NES video is out of spec, and how those out-of-spec colors are handled is undefined.  There&#39;s also something to do with the properties of the integrated circuit&#39;s design and/or manufacturing, which produces unpredictable and inconsistent output.  It can all get <a href="https://www.nesdev.org/wiki/NTSC_video">quite complicated</a> and I don&#39;t pretend to get most of it.  In any case, there can never be a single &quot;true&quot; or &quot;accurate&quot; palette.  Nevertheless, people have created RGB palettes for use with emulators (both hardware and software) and NES/Famicom hardware mods, and some of them aim to closely reproduce how NES video would appear on consumer TVs or professional monitors of the day.  While the word &quot;accurate&quot; may not apply to any NES palette, perhaps these palettes could be described as &quot;authentic.&quot;</p>
     <p>The work put into these authentic palettes is extensive and far beyond my knowledge.  Rather, I&#39;m aiming for the different goal of creating an NES palette that I find more aesthetically pleasing.  The NES produces a range of colors that are mostly unsaturated, a bit dark, and somewhat naturalistic.  This was a great strength, I suspect, of the system in its time.  In contrast to the harsh, artificial primary colors of some of its competitors or home computer counterparts, the NES&#39;s palette enables convincing depictions of foliage, dirt, dimly-lit scenes, and skies that don&#39;t sear your eyes.</p>
-    <p>Image: NES FirebrandX Smooth Palette
-    Image description: The &quot;Smooth&quot; palette by FirebrandX, one of the most popular authentic palettes.</p>
+
+    <div style="margin:auto;">
+        <img src="Images/firebrandx_smooth_palette.png" alt="The FirebrandX Smooth palette." style="width: 100%; height: 100%;">
+        <p>The &quot;Smooth&quot; palette by <a href="http://www.firebrandx.com/nespalette.html">FirebrandX</a>, one of the most popular authentic palettes.</p>
+    </div>
+    
     <p>Nevertheless, while it holds up well for its time, and I have nothing but praise for the designers of the NES PPU, there are swathes of colors here that I find unappealing.  Foremost among them are the colors that the Angry Video Game Nerd liked to refer to as &quot;puke greens&quot;, dark yellow-greens that can certainly serve a purpose, but are often used for deeply unattractive backgrounds.  Additionally, the NES lacks a convincing yellow (with a dim gold being the closest), there&#39;s no bright and saturated red, and the blue-greens are too dark and saturated for my tastes.  </p>
     <p>Still, you can&#39;t make subjective improvements by just looking at a standalone palette and changing the colors you don&#39;t like.  You have to look at how the colors are actually used in games.  Fortunately, thanks to the features of FCEUX, it&#39;s trivial to edit the palette while playing games, so I took the approach of playing some of my favorite or otherwise popular NES games, modifying colors with HSV to make the games either resemble what arcade versions/later games/artwork indicates the artists aimed for, or otherwise simply what I like looking at.  I believe I started with the &quot;Unsaturated V6&quot; palette, included with FCEUX, for this.</p>
     <p>Since the various artists for these games no doubt used the same colors for different purposes, it&#39;s impossible to make a one-size-fits-all change.  That said, I found that many of the alterations I made provided benefits to a surprisingly large number of games, which I attribute to the limited NES palette and common scenes/themes of NES games often constraining artists to use the same colors for the same purposes.  Below, I&#39;ll go through some comparisons of these games, and I&#39;ll add a few thoughts for each one on how I feel the new palette compares, in terms of subjective appeal, to FirebrandX&#39;s rip of the NES Classic palette, because that palette is pretty authentic and because it&#39;s among the most widely-used palettes due to its creation and usage by Nintendo.  Obviously, the point is not to say my palette is better than the NES Classic palette, because they&#39;re aiming for totally different goals.</p>
     <hr>
     <p>Table of contents/list:</p>
     <div>
-        <a href="#super-mario-bros-">Super Mario Bros.</a><hr>
-        <a href="#balloon-fight">Balloon Fight</a><hr>
-        <a href="pac-man">Pac-Man</a><hr>
-        <a href="galaga">Galaga</a><hr>
-        <a href=dr-mario">Dr. Mario</a><hr>
-        <a href="the-legend-of-zelda">The Legend of Zelda</a><hr>
-        <a href="zelda-ii">Zelda II</a><hr>
-        <a href="super-mario-bros-2">Super Mario Bros. 2</a><hr>
-        <a href="super-mario-bros-3">Super Mario Bros. 3</a><hr>
-        <a href="mega-man-2">Mega Man 2</a><hr>
-        <a href="jurassic-park">Jurassic Park</a><hr>
-        <a href="metroid">Metroid</a><hr>
-        <a href="kirby-s-adventure">Kirby&#39;s Adventure</a><hr>
-        <a href="castlevania">Castlevania</a><hr>
-        <a href="battletoads">Battletoads</a><hr>
-        <a href="contra">Contra</a><hr>
+        <a href="#super-mario-bros-">Super Mario Bros.</a>
+        <a href="#balloon-fight">Balloon Fight</a>
+        <a href="pac-man">Pac-Man</a>
+        <a href="galaga">Galaga</a>
+        <a href=dr-mario">Dr. Mario</a>
+        <a href="the-legend-of-zelda">The Legend of Zelda</a>
+        <a href="zelda-ii">Zelda II</a>
+        <a href="super-mario-bros-2">Super Mario Bros. 2</a>
+        <a href="super-mario-bros-3">Super Mario Bros. 3</a>
+        <a href="mega-man-2">Mega Man 2</a>
+        <a href="jurassic-park">Jurassic Park</a>
+        <a href="metroid">Metroid</a>
+        <a href="kirby-s-adventure">Kirby&#39;s Adventure</a>
+        <a href="castlevania">Castlevania</a>
+        <a href="battletoads">Battletoads</a>
+        <a href="contra">Contra</a>
     </div>
     <hr>
     <p>Without further ado, let&#39;s start with the greatest NES game of all.</p>
@@ -83,6 +90,7 @@
     <h2 id="dr-mario">Dr. Mario</h2>
     <img src="Images/D.M_Classic.png" alt="Dr. Mario">
     <img src="Images/D.M_New.png" alt="Dr. Mario">
+    <br>
     <img src="Images/D.M_Classic2.png" alt="Dr. Mario">
     <img src="Images/D.M_New2.png" alt="Dr. Mario">
     <p>I&#39;ll be frank.  I think Dr. Mario&#39;s colors on the Classic are ugly, full stop.  The logo, which is present at all times in gameplay, is again that sickly shade of green-yellow -- fitting, I suppose, for a game where you fight viruses, but off-putting nonetheless.  Dr. Mario himself sports green-tinted hair, and the viruses are dull.  With the new palette, these issues are fixed: the title is a healthy yellow, Mario has given up his imitation of the Joker, and the viruses have more contrast between them.  An all-around win for the new palette, in my book.</p>
@@ -101,6 +109,7 @@
     <h2 id="super-mario-bros-3">Super Mario Bros. 3</h2>
     <img src="Images/SMB.3_Classic.png" alt="Super Mario Bros. 3">
     <img src="Images/SMB.3_New.png" alt="Super Mario Bros. 3">
+    <br>
     <img src="Images/SMB.3_Classic2.png" alt="Super Mario Bros. 3">
     <img src="Images/SMB.3_New2.png" alt="Super Mario Bros. 3">
     <p>The best NES game, in my book, now sports a bit bluer of a sky, brighter item boxes, and more contrast on the map screen, although the color of the paths on the map is slightly less distinct compared to the surround area now.  Still, I think it&#39;s a win.</p>
@@ -111,6 +120,7 @@
     <h2 id="zelda-ii-the-adventure-of-link">Zelda II: The Adventure of Link</h2>
     <img src="Images/ZII_Classic.png" alt="Zelda II">
     <img src="Images/ZII_New.png" alt="Zelda II">
+    <br>
     <img src="Images/ZII_Classic2.png" alt="Zelda II">
     <img src="Images/ZII_New2.png" alt="Zelda II">
     <p>Zelda II was one of my motivations for this palette.  The overworld is quite ugly, and the side-scrolling sections can look dull.  It never fit so well with the excellent music, and I think the new palette goes a long way to making it more attractive.</p>

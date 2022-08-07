@@ -1,0 +1,106 @@
+body {
+    padding:0px;
+    margin:auto;
+    background-color:#020204;
+    background-attachment: fixed;
+    color:rgb(250,250,250);
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+  }
+  
+  div {
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    font-size:20px;
+    margin-top:10px;
+    margin-bottom:10px;
+  }
+  
+  h1 {
+    margin-top:40px;
+    margin-bottom:1vh;
+    font-size:6vh;
+    font-weight:200;
+    color:rgb(255,255,255);
+    text-align:center;
+  }
+  
+  h2 {
+    margin-top:20px;
+    margin-bottom:20px;
+    font-size:60px;
+    font-weight: 300;
+    color:rgb(250,250,250);
+    text-align:center;
+  }
+  
+  h3 {
+    margin:0px;
+    margin-bottom: 5px;
+    padding: 4px;
+    font-size:20px;
+    font-weight: 300;
+    border-radius: 10px 10px 0px 0px;
+    text-align:center;
+  }
+  
+  a {
+    color:white;
+    text-decoration: none;
+  }
+  
+  p {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size:2.5vh;
+    line-height:5vh;
+    text-align:left;
+    color:rgb(245,245,245);
+    max-width: 80vh;
+  }
+  
+  hr {
+    width:50%;
+    margin-top: 40px;
+    margin-bottom:40px;
+    border: 5px solid black;
+  }
+  
+  img {
+    width: 234%;
+    height: 200%;
+    image-rendering: pixelated;
+  }
+  
+  
+  /*Sticky navbar stuff from w3schools*/
+  #navbar {
+    overflow: hidden;
+    background: linear-gradient(#020204, #09090f);
+    height: 80px;
+    line-height: 80px;
+    margin:0px;
+    display: block;
+  }
+  
+  /* Navbar links */
+  #navbar a {
+    color: #efefff;
+    font-size: 3vh;
+    padding: 4vw;
+    text-align: center;
+  }
+  
+  .spaced {
+    padding-bottom: 80px;
+    display: inline-block;
+  }
+  
+  /* The sticky class is added to the navbar with JS when it reaches its scroll position */
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
