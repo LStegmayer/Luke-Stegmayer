@@ -70,6 +70,8 @@ body {
   img {
     width: 78%;
     height: 67%;
+    margin-left: auto;
+    margin-right: auto;
     image-rendering: pixelated;
   }
   
