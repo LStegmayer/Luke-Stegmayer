@@ -9,7 +9,7 @@ body {
   
   div {
     text-align: center;
-    max-width: 805px;
+    max-width: 810px;
     font-size:20px;
     margin-top:10px;
     margin-bottom:10px;
@@ -69,7 +69,6 @@ body {
   }
   
   img {
-    display: block;
     width: 400px;
     height: 350px;
     margin-left: auto;
