@@ -18,8 +18,8 @@ div {
   margin-right: auto;
 }
 
-.img_desc {
-  margin-top: 4px;
+.table_of_contents {
+  max-width: 30em;
 }
 
 h1 {
@@ -27,14 +27,19 @@ h1 {
   margin-bottom:0.5em;
   margin-left: auto;
   margin-right: auto;
+  font-size: 3em;
   font-weight:400;
   max-width: 90%;
   color:rgb(255,255,255);
   text-align:center;
 }
 
+.site_title {
+  font-weight: 200;
+}
+
 h2 {
-  margin-top:1em;
+  margin-top:1.5em;
   margin-bottom:0.5em;
   font-size: 2em;
   font-weight: 500;
@@ -66,6 +71,10 @@ p {
   color:rgb(240,240,240);
 }
 
+.img_desc {
+  margin-top: 4px;
+}
+
 img {
   max-width: 85%;
   margin-left: auto;
@@ -75,10 +84,10 @@ img {
 .nes_img {
   width: 20em;
   max-width: 85%;
-  height: .87*width;
+  aspect-ratio: 8/7;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 0.25em;
+  margin-top: 0.5em;
   margin-bottom: 0.25em;
   image-rendering: pixelated;
 }
