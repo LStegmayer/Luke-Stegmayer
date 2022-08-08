@@ -9,11 +9,12 @@ body {
   
   div {
     text-align: center;
-    display: inline-block;
-    width: 100%;
+    max-width: 805px;
     font-size:20px;
     margin-top:10px;
     margin-bottom:10px;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   h1 {
