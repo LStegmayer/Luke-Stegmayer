@@ -73,6 +73,14 @@ p {
   color:rgb(240,240,240);
 }
 
+button {
+  margin: 1em;
+  font-size: 2vmax;
+  font-weight: 700;
+  padding: 0.3em;
+  border-radius: 0.4em;
+}
+
 .img_desc {
   margin-top: 4px;
 }
