@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <title>2-Color Palette Generator</title>
   <link rel="stylesheet" href="index.css">
+  <link rel="shortcut icon" href="favicon.png" />
 </head>
 <body>
   <div id="spacer"></div>
@@ -15,7 +16,8 @@
 
   <h1>2-Color Palette Generator</h1>
   
-  <p>This is a color palette 'generator' - actually, it's selecting colors from a pre-made color palette in a pre-defined way, so it'll always generate the same colors in the same order and repeat after 32 combinations.  The upside is that the colors have been chosen by an alleged human (me), so they should be more aesthetically appealing than random generation.</p>
+  <p>This is a color palette 'generator' - actually, it's selecting colors from a pre-made color palette in a pre-defined way, so it'll always generate the same colors in the same order and repeat after 32 combinations.  The upside is that the colors have been chosen by me to be appealing.</p>
+
   <br>
   
   <div>
@@ -40,8 +42,6 @@
     let colors = ["#EF5659","#56D2EF","#9956EF","#91EF56","#EF45B2","#EFEE5C","#67F2A6","#F469F6","#4969FF","#5CF7FF","#EE693E","#5FD638","#FFCE24","#4565E7","#2000AB","#FF6A6C","#F46AFF","#D2FF6A","#FFD36D","#000000","#186C17","#FFAC36","#ABFF94","#4CA400","#FF9A00","#000000","#FF48A1","#4F1AFF","#6F00BC","#FF9C00","#FFFFFF","#512D00"]
     var count = 0;
     function newColor() {
-        let x = 0;
-        let y = 0;
         let col1 = "rgb(0,0,0)";
         let col2 = "rgb(0,0,0)";
         if (count < 16)
@@ -58,9 +58,9 @@
         }
         else
         {
-            count = 0;
-            col1 = colors[count*2];
-            col2 = colors[count*2+1];
+            col1 = colors[0];
+            col2 = colors[1];
+            count = 1;
         }
         ctx1.fillStyle = col1;
         ctx1.fillRect(0,0,canvas1.width,canvas1.height);

@@ -19,6 +19,8 @@
       <a href="../about.html"> About </a>
     </div>
 
+    <p>Femto-4 is a concept for a tiny fantasy console (hence the name playing on Pico-8) based on a 64x64 output with 8 lovingly-chosen colors, 4x4 1-bit tiles, no scrolling or arbitrary drawing support, and a simple programming language intended to suit the tight constraints.  It didn't get very far, as you can see -- just a tile and map editor, which you can use to create mockups.  I'd really like to return to this project someday, but time will tell.</p>
+
     <!--Map + Pixel Editor Go Here-->
     <div style="display: flex; align-items: start; justify-content: space-around;">
         <div style="width: 340px; padding: 0px; color: black; background-color: lightgray; border-radius: 10px; 
@@ -31,7 +33,7 @@
         user-select: none; border:1px solid gray;">
             <h3>Tile Editor</h3>
             <canvas id="TileEditor" width="160" height="160" style="border:1px solid white; image-rendering: crisp-edges;"></canvas>
-            <div style="font-weight:200; font-size: 14px; background-color: white; border-radius: 0px 0px 10px 10px; margin: 0px; padding-top: 5px; padding-bottom: 5px;">
+            <div style="font-weight:200; font-size: 14px; background-color: white; border-radius: 0px 0px 10px 10px; margin: 0px; padding-top: 5px; padding-bottom: 5px; margin: auto; margin-bottom: 5px; max-width: 90%;">
                 Foreground color:
                 <select name="FGColor" id="FGColor">
                     <option value="white">White</option>
@@ -60,7 +62,7 @@
         <div style="width: 468px; padding: 0px; color: black; background-color: lightgray; border-radius: 10px; border:1px solid gray; user-select: none;">
             <h3>Map Editor</h3>
             <canvas id="MapEditor" width="448" height="448" style="border:1px solid white; image-rendering: crisp-edges;"></canvas>
-            <div style="font-weight:200; font-size: 14px; background-color: white; border-radius: 0px 0px 10px 10px; margin: 0px; padding-top: 5px; padding-bottom: 5px;">
+            <div style="font-weight:200; font-size: 14px; background-color: white; border-radius: 0px 0px 10px 10px; margin: 0px; padding-top: 5px; padding-bottom: 5px; margin: auto; margin-bottom: 5px; max-width: 96%;">
                 <button id="exportButton">Export to PNG</button>
             </div>
         </div>
