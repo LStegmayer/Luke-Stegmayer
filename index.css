@@ -73,6 +73,12 @@ p {
   color:rgb(240,240,240);
 }
 
+span {
+  width: 30%;
+  display: inline-block;
+  font-size: 2vmax;
+}
+
 button {
   margin: 1em;
   font-size: 2vmax;
