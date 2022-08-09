@@ -96,8 +96,8 @@ img {
 
 #navbar {
   background: linear-gradient(#0e0e0f, #303040);
-  height: 80px;
-  line-height: 80px;
+  height: 5em;
+  line-height: 5em;
   display: block;
   text-align: center;
   max-width: 100%;
@@ -109,9 +109,8 @@ img {
 /* Navbar links */
 #navbar a {
   color: #efefff;
-  padding: 7vw;
-  font-size: clamp(20px, 3em, 4vmin);
-  font-size: large;
+  padding: 8vw;
+  font-size: clamp(20px, 3em, 2vh);
   text-align: center;
   text-decoration: none;
 }
