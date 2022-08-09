@@ -17,7 +17,7 @@
     </div>
 
     <div style="margin-top:0px;margin-bottom:0px;">
-    	<select id="levelselect" style="font-size:14px;font-family:Lucida Sans Unicode,Lucida Grande,sans-serif;color:rgb(30,30,30);text-align:center;">
+    	<select id="levelselect" style="font-size:16px;font-family:Lucida Sans Unicode,Lucida Grande,sans-serif;color:rgb(30,30,30);text-align:center;">
     	  <option value="mariocircuit-1.png">Mario Circuit 1</option>
     		<option value="mariocircuit-2.png">Mario Circuit 2</option>
     		<option value="mariocircuit-3.png">Mario Circuit 3</option>
@@ -49,7 +49,7 @@
   	<script src="ThreeJS/three.min.js"></script>
   	<script type="module">
   		var WIDTH = window.innerWidth/1.2;
-  		var HEIGHT = window.innerHeight/1.2;
+  		var HEIGHT = WIDTH*0.58;
   		var renderer = new THREE.WebGLRenderer({antialias:true});
   		renderer.setPixelRatio( window.devicePixelRatio * 1 ); //use to provide supersamping or undersampling
   		renderer.setSize(WIDTH, HEIGHT);
